@@ -1,0 +1,65 @@
+<?php 
+//index.php
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/Merriweather-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Merriweather-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/YesevaOne-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="styles/crit.css" as="style" />
+    <style>
+        body {
+            font-family: 'Merriweather-Regular', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/crit.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Тест</title>
+</head>
+<body>
+    <div class="container start">
+        <div class="content ">
+            <img class="logo" src="imgs/logo.png">
+            <p class="start-text">Название теста</p>
+            <button class="next" id="start_game">Начать тест</button>
+        </div>
+    </div>
+    <div class="container question">
+        <div class="content">
+            <div class="info-level">
+                <div class="number-question"><span id="numQst"></span>/<span id="countQst"></span></div>
+                <div class="progress-container">
+                    <div class="progress" id="progressLine" style="width: 100%;"></div>
+                    <img class="img-level" src="/app/imgs/heart.svg">
+                </div>
+            </div>
+        <p id="questionText"></p>
+            <div class="variants" id="variants"></div>
+            <button class="next" id="next">Следующий вопрос →</button>
+        </div>
+    </div>
+    <div class="container subscribe">
+        <div class="content">
+            <button class="tg">Телеграм канал →</button>
+        </div>
+    </div>
+    <div class="big-container result">
+        <div class="content">
+            <div id="results-chart">
+                <div id="radarChart"></div>
+                <div id="label"></div>
+            </div>
+            <div id="results-text">
+                <p class="title-results">Итак, ответы</p>
+                <div class="results" id="results"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
+    <script type="module" defer src="scripts/App.js"></script>
+    <!-- <script type="module" src="script.js"></script> -->
+</body>
+</html>
